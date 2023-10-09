@@ -1,0 +1,7 @@
+{
+  "name": "Ionic 7 test app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
