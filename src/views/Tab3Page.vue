@@ -37,7 +37,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonIcon, IonToggle } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonIcon, IonToggle, onIonViewDidEnter, onIonViewDidLeave, onIonViewWillEnter, onIonViewWillLeave  } from '@ionic/vue';
 import { colorWand, cafe, logoDiscord } from 'ionicons/icons';
 
 const darkmode = ref( false) ;
@@ -45,6 +45,25 @@ const darkmode = ref( false) ;
 const toggleDarkMode = () => {
   console.log(`darkmode : ${darkmode.value}`)
 };
+
+
+// demo van een aantal event-hooks in Ionic 
+onIonViewDidEnter(() => {
+  console.log('Experimento View did enter');
+});
+
+onIonViewDidLeave(() => {
+  console.log('Experimento View did leave');
+});
+
+onIonViewWillEnter(() => {
+  console.log('Experimento View will enter');
+});
+
+onIonViewWillLeave(() => {
+  console.log('Experimento View will leave');
+});
+
 </script>
 
 
