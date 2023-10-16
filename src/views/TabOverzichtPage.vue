@@ -12,10 +12,12 @@
         </ion-toolbar>
       </ion-header>
 
+      <!-- We zorgen er hier voor dat de pr_id getoond wordt 'on hover' -->
+      <!-- Kan je de product categorie id tonen wanneer over de categorienaam wordt 'gehoverd' ?-->
       <ion-list>
         <ion-item v-for="{pr_id, pr_prijs, pr_naam, ct_naam} in producten" :key="pr_id">
           <ion-item slot="start">€{{pr_prijs}}</ion-item>
-          <ion-label>{{pr_naam}}</ion-label>
+          <ion-label :title="pr_id">{{pr_naam}}</ion-label>
           <ion-item slot="end">{{ct_naam}}</ion-item>
         </ion-item>
 
