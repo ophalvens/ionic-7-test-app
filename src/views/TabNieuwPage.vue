@@ -13,9 +13,6 @@
       </ion-header>
       <ion-grid>
         <ion-row>
-          <ion-col class="ion-text-center"><h1 >Nieuw product</h1></ion-col>
-        </ion-row>
-        <ion-row>
           <ion-col class="ion-text-center">Welk product wil je toevoegen?</ion-col> 
         </ion-row>
 
