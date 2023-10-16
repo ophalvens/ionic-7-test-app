@@ -24,9 +24,16 @@
 
 <script setup>
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-// In dit voorbeeld zijn icons gebruikt uit de 3 Ionicons sets:
-// standaard of filled (addCircle)
-// Outline (listOutline)
-// Sharp (constroctSharp)
 import { addCircle, listOutline,constructSharp } from 'ionicons/icons';
+
+// In dit voorbeeld zijn icons gebruikt uit de 3 Ionicons sets:
+//  standaard of filled (addCircle)
+//  Outline (listOutline)
+//  Sharp (constructSharp)
+// Voor consistentie blijf je in je eigen project best in 1 set.
+// Let op : de syntax op https://ionic.io/ionicons/ volgt een ander patroon ("-" concatenatie)
+//  add-circle online -> addCircle in je project
+//  list-outline -> listOutline in je project
+//  construct-sharp -> constructSharp in je project
+
 </script>

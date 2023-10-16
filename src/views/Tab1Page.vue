@@ -22,16 +22,18 @@
         <ion-row>
           <ion-col >
             <ion-item>
-              <ion-label position="floating">Product :</ion-label>
               <ion-input 
+                label="Product"
+                label-placement="stacked"
                 placeholder="Naam product" 
                 id="productNaam"
                 name="productNaam"
                 required="true"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Prijs :</ion-label>
               <ion-input 
+                label="Prijs"
+                label-placement="stacked"
                 placeholder="10" 
                 id="productPrijs"
                 name="productPrijs"
@@ -39,8 +41,11 @@
                 required="true"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Categorie :</ion-label>
-              <ion-select interface="popover" placeholder="Selecteer categorie">
+              <ion-select
+                label="Categorie"
+                label-placement="stacked" 
+                interface="popover" 
+                placeholder="Selecteer categorie">
                 <ion-select-option value="1">Fruit</ion-select-option>
                 <ion-select-option value="2">Groente</ion-select-option>
               </ion-select>
