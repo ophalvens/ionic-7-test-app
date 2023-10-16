@@ -80,20 +80,37 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, IonButton } from '@ionic/vue';
 
 const productNaam = ref( '' );
 const productPrijs = ref( 0.00 );
 const productCategorie = ref( 0 );
 
-const logProduct = () => {
+const axios = inject('axios') // inject axios
+const postProduct = () => {
+  axios
+    .post('https://stevenop.be/wm/api/PRODUCTSadd.php',  {
+        PR_naam: productNaam.value , 
+        PR_CT_ID: productCategorie.value, 
+        PR_prijs: productPrijs.value})
+    .then(response => {
+      // controleer de response
+      console.log(response);
+      if(response.status !== 200) {
+        // TODO: er is iets fout gegaan, doe iets met deze info
+        console.log(response.status);
+      }
+    }) ;
+}
+const logProduct = () =>{
   console.log(`naam: ${productNaam.value}, prijs: ${productPrijs.value}, categorie: ${productCategorie.value}`);
 };
 
 const verzendProduct = () => {
-  // TODO: dit verder uitwerken en effectief het product verzenden
-  logProduct();
+  // TODO: input controle indien nodig
+  
+  // verstuur naar de backend (API)
+  postProduct();
 };
-
 </script>
