@@ -19,7 +19,7 @@
           <ion-icon :icon="colorWand" size="large"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-toggle :checked="false" name="darkmode">Darkmode</ion-toggle>
+          <ion-toggle :checked="false" v-model="darkmode" @ion-change="toggleDarkMode();">Darkmode</ion-toggle>
         </ion-item>
         <ion-item>
           <ion-toggle :checked="false" name="coffeeMode" class="coffee">Coffee mode <ion-icon :icon="cafe" ></ion-icon></ion-toggle>
@@ -36,8 +36,15 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonIcon, IonToggle } from '@ionic/vue';
 import { colorWand, cafe, logoDiscord } from 'ionicons/icons';
+
+const darkmode = ref( false) ;
+
+const toggleDarkMode = () => {
+  console.log(`darkmode : ${darkmode.value}`)
+};
 </script>
 
 
