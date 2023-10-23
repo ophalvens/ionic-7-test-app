@@ -1,0 +1,8 @@
+{
+  "appId": "be.stevenop.ionic7testapp",
+  "appName": "Ionic 7 test app",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
