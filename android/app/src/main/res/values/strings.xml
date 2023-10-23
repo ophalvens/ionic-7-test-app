@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ionic 7 test app</string>
+    <string name="title_activity_main">Ionic 7 test app</string>
+    <string name="package_name">be.stevenop.ionic7testapp</string>
+    <string name="custom_url_scheme">be.stevenop.ionic7testapp</string>
+</resources>
