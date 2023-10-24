@@ -2,6 +2,7 @@
   "appId": "be.stevenop.ionic7testapp",
   "appName": "Ionic 7 test app",
   "webDir": "dist",
+  "WindowsAndroidStudioPath": "C:\\Users\\steven.ophalvens\\AppData\\Local\\Programs\\Android Studio\\bin\\studio64.exe",
   "server": {
     "androidScheme": "https"
   }
